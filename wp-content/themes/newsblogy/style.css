@@ -1,0 +1,382 @@
+/*
+Theme Name: 	   NewsBlogy
+Text Domain: 	   newsblogy
+Template: 			newsmunch
+Version:            0.8
+Tested up to:       6.8
+Requires at least:  4.7
+Requires PHP:       7.0
+Author:             DesertThemes
+Author URI:         https://desertthemes.com/
+Theme URI:          https://desertthemes.com/themes/newsblogy-free/
+Description:        NewsBlogy is a fast, clean, Best Responsive News Magazine WordPress theme. NewsBlogy is suitable for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative website. With its modern and clean design, NewsBlogy offers a visually appealing layout that is easy to navigate, making it ideal for delivering content to your readers. This theme comes equipped with a range of customizable options, custom widgets, and color schemes, allowing you to tailor your website to your specific needs and branding. It also supports various post formats, making it easy to present a variety of content types, from articles and videos to images and galleries. NewsBlogy is optimized for speed and SEO, ensuring that your website loads quickly and ranks well in search engine results. Its responsive design ensures that your content looks great on all devices, whether it's a desktop computer, tablet, or smartphone. NewsBlogy demos https://preview.desertthemes.com/newsmunch/
+Tags:               blog, e-commerce, entertainment, grid-layout, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, featured-images, featured-image-header, flexible-header, post-formats, rtl-language-support, translation-ready, theme-options, threaded-comments, footer-widgets
+License: GPLv3 or later
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --dt-main-rgb: 27, 132, 21;
+    --dt-black-color: #0a1233;
+    --dt-title-family: "Josefin Sans", sans-serif;
+    --dt-base-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    font-optical-sizing: auto;
+}
+
+.header--five .site--logo a:focus {
+    outline: 1px dotted #fff;
+    outline-offset: 3px;
+}
+
+.header--five .dt_navbar-nav .dt_home-icon a:focus {
+    outline: 1px dotted;
+    outline-offset: -4px;
+}
+
+.header--five .dt_navbar-wrapper.is--sticky.on .dt_navbar-inner {
+    display: none;
+}
+
+.header--five .dt_navbar-menu .dt_navbar-subscribe-item .dt-subscribe,
+.header--five .dt_navbar-menu .dt_navbar-login-item .dt-user-login,
+.header--five .dt_navbar-menu .dt_navbar-cart-item .dt_navbar-cart-icon,
+.header--five .dt_navbar-menu .dt_navbar-search-item button.dt_navbar-search-toggle {
+    background: transparent;
+    width: 2.4rem;
+    height: 2.4rem;
+    line-height: normal;
+    padding: 0;
+    box-shadow: none;
+}
+
+.header--five .dt_navbar-menu .dt_navbar-sidebar-item .dt_navbar-sidebar-toggle,
+.header--five .dt_navbar-sidebar-toggle:hover .dt_navbar-sidebar-toggle-inner,
+.header--five .dt_navbar-sidebar-toggle:focus .dt_navbar-sidebar-toggle-inner,
+.header--five .dt_navbar-nav .dt_home-icon a,
+.header--five .dt_navbar-nav .dt_navbar-mainmenu>.menu-item-has-children>a:after,
+.header--five .dt_navbar-nav .dt_navbar-mainmenu>li>a,
+.header--five .dt_navbar-nav .dt_navbar-mainmenu>li.active>a,
+.header--five .dt_navbar-nav .dt_navbar-mainmenu>li.focus>a,
+.header--five .dt_navbar-nav .dt_navbar-mainmenu>li:hover>a,
+.header--five .dt_navbar-nav .dt_navbar-mainmenu>li:not(:hover, .focus, .active)>a {
+    color: #fff;
+}
+
+.header--five .dt_navbar-nav .dt_home-icon a::before,
+.menu_active-three .header--five .dt_navbar-nav .dt_navbar-mainmenu>li>a::before {
+    top: -4px;
+}
+
+.menu_active-three .header--five .dt_navbar-nav .dt_navbar-mainmenu>li.active>a,
+.menu_active-three .header--five .dt_navbar-nav .dt_navbar-mainmenu>li:hover>a,
+.menu_active-three .header--five .dt_navbar-nav .dt_navbar-mainmenu>li.focus>a,
+.header--five .dt_navbar-nav .dt_home-icon a {
+    background-color: #fff;
+    color: var(--dt-main-color);
+}
+
+.header--five.menu_active-one .dt_navbar-nav .dt_navbar-mainmenu>li>a::before {
+    background-color: #fff;
+}
+
+@media (min-width: 62em) {
+    .header--five sup.menu-badge {
+        top: -1px;
+    }
+}
+
+.header--five .dt_navbar-menus {
+    background-color: var(--dt-main-color);
+}
+
+.header--five .dt_navbar-wrapper .dt_navbar-menu {
+    justify-content: space-between;
+}
+
+.header--five .dt_navbar-wrapper .dt_navbar-inner .dt-row.dt-py-5{
+    padding: 4.5rem 0;
+}
+
+
+.header--five .dt_navbar-wrapper .dt_navbar-inner .dt-row .dt-col-md:first-child .dt_navbar-right > ul {
+    padding-left: 0;
+    padding-right: 1.2rem;
+    justify-content: start;
+}
+
+.header--five .dt_navbar-wrapper .dt_navbar-inner .site--logo {
+    text-align: center;
+}
+
+.header--five.menu_active-two .dt_navbar-nav .dt_navbar-mainmenu>li>a::before {
+    background: #fff;
+}
+
+.menu_active-three:not(.header--five) .dt_navbar-menus {
+    padding: 0;
+    border-bottom: 4px solid var(--dt-main-color);
+}
+
+.header--five.menu_active-default .dt_navbar-nav .dt_home-icon a,
+.header--five.menu_active-one .dt_navbar-nav .dt_home-icon a,
+.header--five.menu_active-two .dt_navbar-nav .dt_home-icon a,
+.header--five.menu_active-three .dt_navbar-nav .dt_navbar-mainmenu>li.active>a,
+.header--five.menu_active-three .dt_navbar-nav .dt_navbar-mainmenu>li:hover>a,
+.header--five.menu_active-three .dt_navbar-nav .dt_navbar-mainmenu>li.focus>a,
+.header--five.menu_active-three .dt_navbar-nav .dt_home-icon a {
+    background-color: rgba(0, 0, 0, .1);
+}
+.dt-posts.dt-g-4 .dt-col-md-12 .post.post-list {
+    padding: 20px 0 20px 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .dt-posts.dt-g-4 .dt-col-md-12 .post.post-list {
+        padding: 0;
+    }
+}
+
+.dt-current-date span i {
+    color: #fff;
+}
+
+.dt_sidebar .wp-block-image.is-style-rounded img {
+    padding: 2px;
+    box-shadow: 0 2px 8px 1px rgba(36, 36, 36, 0.3);
+}
+
+/* Animations */
+
+.background-wrapper .squares,
+.background-wrapper .circles,
+.background-wrapper .triangles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-wrapper .squares .square,
+.background-wrapper .circles .circle,
+.background-wrapper .triangles .triangle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0.1;
+    animation: animate 8s linear infinite;
+    background: #4021891c;
+    bottom: -100px;
+}
+
+.background-wrapper .triangles .triangle {
+    border-bottom-color: #2eb5982e;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    background: transparent;
+}
+
+.background-wrapper .circles .circle {
+    border-radius: 100px;
+}
+
+.background-wrapper .triangles .triangle {
+    width: 0;
+    height: 0;
+    border-bottom-width: 42px;
+    border-bottom-style: solid;
+    border-left-width: 25px;
+    border-left-style: solid;
+    border-right-width: 25px;
+    border-right-style: solid;
+    border-radius: 0;
+}
+
+.background-wrapper .squares .square:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.background-wrapper .circles .circle:nth-child(1) {
+    left: 10%;
+    width: 22px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.background-wrapper .triangles .triangle:nth-child(1) {
+    left: 45%;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    border-bottom-width: 22px;
+    animation-delay: 0s;
+}
+
+.background-wrapper .squares .square:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.background-wrapper .circles .circle:nth-child(2) {
+    left: 45%;
+    width: 84px;
+    height: 80px;
+    animation-delay: 12s;
+}
+
+.background-wrapper .triangles .triangle:nth-child(2) {
+    left: 25%;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    border-bottom-width: 28px;
+    animation-delay: 12s;
+}
+
+.background-wrapper .squares .square:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.background-wrapper .circles .circle:nth-child(3) {
+    left: 90%;
+    width: 53px;
+    height: 50px;
+    animation-delay: 4s;
+}
+
+.background-wrapper .triangles .triangle:nth-child(3) {
+    left: 80%;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    border-bottom-width: 28px;
+    animation-delay: 4s;
+}
+
+.background-wrapper .squares .square:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.background-wrapper .circles .circle:nth-child(4) {
+    left: 60%;
+    width: 53px;
+    height: 50px;
+    animation-delay: 18s;
+}
+
+.background-wrapper .triangles .triangle:nth-child(4) {
+    left: 30%;
+    border-right-width: 20px;
+    border-left-width: 20px;
+    border-bottom-width: 38px;
+    animation-delay: 18s;
+}
+
+.background-wrapper .squares .square:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.background-wrapper .circles .circle:nth-child(5) {
+    left: 90%;
+    width: 43px;
+    height: 40px;
+    animation-delay: 1s;
+}
+
+.background-wrapper .triangles .triangle:nth-child(5) {
+    left: 70%;
+    border-right-width: 25px;
+    border-left-width: 25px;
+    border-bottom-width: 42px;
+    animation-delay: 1s;
+}
+
+.background-wrapper .squares .square:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.background-wrapper .squares .square:nth-child(7) {
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 7s;
+}
+
+.background-wrapper .squares .square:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.background-wrapper .squares .square:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.background-wrapper .squares .square:nth-child(10) {
+    left: 85%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:hover, 
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:focus {
+    color: #fff;
+}
+
+.wp-block-page-list {
+    list-style: none;
+}
+
+.wc-block-grid__products .wc-block-components-product-button__button {
+    border-radius: 0;
+    text-decoration: none;
+}

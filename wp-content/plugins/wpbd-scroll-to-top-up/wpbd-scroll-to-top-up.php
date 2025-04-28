@@ -42,4 +42,48 @@
 add_action( "wp_footer", "wpbdstt_scroll_script" );
 
 
+
+// Plugin Customization Sattings
+add_action( "customize_register", "wpbdstt_scroll_to_top" );
+function wpbdstt_scroll_to_top($wp_customize){
+  $wp_customize-> add_section('wpbdstt_scroll_top_section', array(
+    'title' => __('Scroll To Top', 'zakirhossen'),
+    'description' => 'Wordpress Scroll to top plugin will help you to enable Back to Top button to your WordPress website.',
+  ));
+
+  $wp_customize ->add_setting('wpbdstt_default_color', array(
+    'default' => '#000000',
+  ));
+  $wp_customize->add_control('wpbdstt_default_color', array(
+      'label'   => 'Background Color',
+      'section' => 'wpbdstt_scroll_top_section',
+      'type'    => 'color',
+  ));
+
+  // Adding Rounded Corner
+  $wp_customize ->add_setting('wpbdstt_rounded_corner', array(
+    'default' => '5px',
+    'description' => 'If you need fully rounded or circular then use 25px here.',
+  ));
+  $wp_customize->add_control('wpbdstt_rounded_corner', array(
+      'label'   => 'Rounded Corner',
+      'section' => 'wpbdstt_scroll_top_section',
+      'type'    => 'text',
+  ));
+}
+
+// Theme CSS Customization
+function wpbdstt_theme_color_cus(){
+  ?>
+  <style>
+    #scrollUp {
+    background-color: <?php print get_theme_mod("wpbdstt_default_color"); ?>;
+    border-radius: <?php print get_theme_mod("wpbdstt_rounded_corner"); ?>;
+  }
+  </style>
+  <?php 
+}
+add_action('wp_head', 'wpbdstt_theme_color_cus');
+
+
 ?>
