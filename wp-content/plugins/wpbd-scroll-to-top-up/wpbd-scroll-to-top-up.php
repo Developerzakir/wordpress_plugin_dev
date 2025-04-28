@@ -15,4 +15,31 @@
  * Text Domain:       wpbdstt
  */
 
+
+
+   // Including CSS
+   function wpbdstt_enqueue_style(){
+     wp_enqueue_style('wpbdstt-style', plugins_url('css/wpbdstt-style.css', __FILE__));
+   }
+   add_action( "wp_enqueue_scripts", "wpbdstt_enqueue_style" );
+
+  // Including JavaScript
+  function wpbdstt_enqueue_scripts(){
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('wpbdstt-plugin-script', plugins_url('js/wpbdstt-plugin.js', __FILE__), array(), '1.0.0', 'true');
+  }
+  add_action( "wp_enqueue_scripts", "wpbdstt_enqueue_scripts" );
+
+  // jQuery Plugin Setting Activation
+  function wpbdstt_scroll_script(){?>
+    <script>
+        jQuery(document).ready(function () {
+        jQuery.scrollUp();
+        });
+    </script>
+  <?php }
+
+add_action( "wp_footer", "wpbdstt_scroll_script" );
+
+
 ?>
