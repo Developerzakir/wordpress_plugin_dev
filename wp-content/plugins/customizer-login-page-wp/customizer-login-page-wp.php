@@ -26,7 +26,24 @@ add_action( 'admin_menu', 'wpclp_add_theme_page' );
    * Plugin Callback
    */
   function wpclp_create_page(){
-    echo 'Plugin Option';
+    ?>
+    <div class="wpclp_main_area">
+      <div class="wpclp_body_area">
+        <h3 id="title"><?php print esc_attr( 'Login Page Customizer' ); ?></h3>
+        <form action="options.php" method="post">
+          <?php wp_nonce_field('update-options'); ?>
+          <label for="wpclp-primary-color" name="wpclp-primary-color"><?php print esc_attr( 'Primary Color' ); ?></label>
+          <input type="color" name="wpclp-primary-color" value="<?php print get_option('wpclp-primary-color') ?>">
+
+
+          <input type="hidden" name="action" value="update">
+          <input type="hidden" name="page_options" value="wpclp-primary-color">
+          <input type="submit" name="submit" class="button button-primary" value="<?php _e('Save Changes', 'wpclp') ?>">
+        </form>
+      </div>
+      <div class="wpclp_sidebar_area"></div>
+    </div>
+  <?php
   }
 
 
